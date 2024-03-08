@@ -37,6 +37,7 @@ CSRF_TRUSTED_ORIGINS = ['https://trash-collector.fly.dev']
 # Application definition
 
 INSTALLED_APPS = [
+    'main_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
