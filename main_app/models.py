@@ -5,7 +5,7 @@ class Trash(models.Model):
   name = models.CharField(max_length=100)
   type = models.CharField(max_length=100)
   description = models.TextField(max_length=250)
-  peicesOfTrash = models.IntegerField()
+  piecesOfTrash = models.IntegerField()
 
   def __str__(self):
     return self.name

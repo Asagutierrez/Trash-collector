@@ -11,28 +11,22 @@
 
 {% block content %}
 
-<section class="card-container">
-  {% for trash in trashed %}
-    <div class="card">
-      <a href="{% url 'trash-detail' trash.id %}">
-
-        <div class="card-content">
-          <div class="card-img-container">
-            <img 
-              src="{% static 'images/trash 6.jpg' %}" 
-              alt="A balled up peice of paper"
-            >
-          </div>
-          <h2 class="card-title">{{ trash.name }}</h2>
-          {% if trash.peicesOfTrash > 0 %}
-          <p>A {{ trash.peicesOfTrash }} Was picked up {{ trash.type }}</p>
-          {% else %}
-            <p>A {{ trash.type }}.</p>
-          {% endif %}
-          <p><small>{{ trash.description }}</small></p>
-        </div>
-      {% comment %} And this line {% endcomment %}
-      </a>
-    </div>
-  {% endfor %}
+<section class="trash-container">
+  <div class="trash-img">
+    <img 
+    src="{% static 'images/trash9.jpg' %}" 
+    alt="A Trash Can full of trash"
+    >
+  </div>
+  <div class="trash-details">
+    <h1>{{ trash.name }}</h1>
+    {% if trash.age > 0 %}
+      <h2>{{ trash.age }} was picked up {{ trash.type }}</h2>
+    {% else %}
+      <h2>Thrown away {{ trash.type }} trash.</h2>
+    {% endif %}
+    <p>{{ trash.description }}</p>
+  </div>
 </section>
+
+{% endblock %}

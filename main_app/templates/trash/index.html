@@ -14,7 +14,7 @@
 <section class="card-container">
   {% for trash in trashed %}
     <div class="card">
-      <a href="/trash{{ trash.id }}">
+      <a href="{% url 'trash-detail' trash.id %}">
 
         <div class="card-content">
           <div class="card-img-container">
