@@ -1,13 +1,17 @@
 from django.shortcuts import render
-
-from django.http import HttpResponse
+from .models import Trash
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello ᓚᘏᗢ</h1>')
+  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')
 
 def trash_index(request):
-  return render(request, 'trash/index.html', {'trash': trash})
+  trash = Trash.objects.all()
+  return render(request, 'trash/index.html', {'trashed': trash})
+
+def trash_detail(request, trash_id):
+  trash = Trash.objects.get(id=trash_id)
+  return render(request, 'trash/detail.html', { 'trashed': trash})
