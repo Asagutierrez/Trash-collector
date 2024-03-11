@@ -131,6 +131,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL = 'trash-index'
+LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = 'home'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

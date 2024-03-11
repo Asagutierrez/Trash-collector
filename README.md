@@ -2,7 +2,7 @@ Hello Welcome to Trash Collector This app i built is ment for people who hate to
 
 # [Trash Collector](https://trash-collector.fly.dev/)
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Icebox items 
 - Be Able to change the picture to match the trash you collected

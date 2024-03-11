@@ -8,4 +8,5 @@ urlpatterns = [
   path('trash/create/', views.TrashCreate.as_view(), name='trash-create'),
   path('trash/<int:pk>/update/', views.TrashUpdate.as_view(), name='trash-update'),
   path('trash/<int:pk>/delete/', views.TrashDelete.as_view(), name='trash-delete'),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
