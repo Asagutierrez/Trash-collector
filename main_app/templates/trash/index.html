@@ -23,10 +23,10 @@
             >
           </div>
           <h2 class="card-title">{{ trash.name }}</h2>
-          {% if trash.peicesOfTrash > 0 %}
-            <p>{{ trash.peicesOfTrash }} {{ trash.type }} were picked up</p>
+          {% if trash.piecesOfTrash > 0 %}
+            <p>{{ trash.piecesOfTrash }} {{ trash.type }} Were Found</p>
           {% else %}
-            <p>{{ trash.type }}.</p>
+            <p> {{ trash.type }}.</p>
           {% endif %}
           <p><small>{{ trash.description }}</small></p>
         </div>
