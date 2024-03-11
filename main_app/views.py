@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Trash
 
 # Define the home view
@@ -15,3 +16,7 @@ def trash_index(request):
 def trash_detail(request, trash_id):
   trash = Trash.objects.get(id=trash_id)
   return render(request, 'trash/detail.html', { 'trashed': trash})
+
+class TrashCreate(CreateView):
+  model = Trash
+  fields = '__all__'

@@ -5,5 +5,6 @@ urlpatterns = [
   path('', views.home, name='home'),
   path('about/', views.about, name='about'),
   path('trash/', views.trash_index, name='trash-index'),
-  path('trash/<int:trash_id>/', views.trash_detail, name='trash-detail')
+  path('trash/<int:trash_id>/', views.trash_detail, name='trash-detail'),
+  path('trash/create/', views.TrashCreate.as_view(), name='trash-create'),
 ]
