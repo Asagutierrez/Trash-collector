@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Delete Trash?</h1>
+  <img src="{% static 'images/Trashman.png' %}" alt="A full trash can"/>
+</div>
+<h2>Are you sure you want to delete {{trash.name}}</h2>
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  <a 
+    href="{% url 'trash-detail' trash.id %}" 
+    class="btn secondary"
+  >
+    Cancel
+  </a>
+  <button type="submit" class="btn danger">Delete {{trash.name}}!</button>
+</form>
+
+{% endblock %}

@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
+  {% if trash %}
+  <h1>Edit {{trash.name}}</h1>
+  {% else %}
   <h1>Add trash</h1>
+  {% endif %}
   <img src="{% static 'images/Trashman.png' %}" alt="A trash can full of garbage"/>
 </div>
 {% comment %} 

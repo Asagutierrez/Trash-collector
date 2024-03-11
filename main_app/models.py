@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Trash(models.Model):
@@ -9,3 +10,6 @@ class Trash(models.Model):
 
   def __str__(self):
     return self.name
+  
+  def get_absolute_url(self):
+    return reverse('trash-detail', kwargs={'trash_id': self.id})

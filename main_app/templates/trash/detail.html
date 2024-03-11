@@ -26,6 +26,9 @@
       <h2>Thrown away {{ trash.type }} trash.</h2>
     {% endif %}
     <p>{{ trash.description }}</p>
+    <div class="trash-actions"></div>
+    <a href="{% url 'trash-update' trashed.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'trash-delete' trashed.id %}" class="btn danger">Delete</a>
   </div>
 </section>
 
